@@ -1,6 +1,16 @@
 
-<%= render 'shared/flash'%>
+<div class='container pt-3'>
+    <div class="jumbotron text-center text-light" style="background-image : url('https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');  background-repeat: no-repeat; background-size: cover; min-height:100%; background-position:right">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</div>
 
-<h1>Hello microverse</h1>
-<%= link_to 'Articles listing', articles_path %> |
-<%= link_to 'About Page', about_path %> 
+<footer id='sticky-footer' class='py-4 bg-dark text-white'>
+  <div class='container text-center'>
+    <small>Copyright &copy; <%= link_to 'Ezekiel Udiomnuo', 'https://eudiomuno.vercel.app', class: 'text-white' %></small>
+  </div>
+</footer>
