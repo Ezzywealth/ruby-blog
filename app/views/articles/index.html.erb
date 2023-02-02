@@ -16,8 +16,8 @@
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 
                         <div class='d-flex justify-content-center'>
-                            <%= button_to 'Show', article_path(article), class: 'btn btn-outline-info mr-2'%>
-                            <%= button_to 'edit', edit_article_path(article), class: 'btn btn-outline-success mr-2'%>
+                            <%= link_to 'Show', article_path(article), class: 'btn btn-outline-info mr-2'%>
+                            <%= link_to 'edit', edit_article_path(article), class: 'btn btn-outline-success mr-2'%>
                             <%= button_to 'delete', article_path(article), method: :delete, data:{turbo_confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'%>
                         </div>
                     </div>
