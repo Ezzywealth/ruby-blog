@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -9,4 +13,10 @@
 
 .nav-item {
   color: #fff;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  height: 100%;
+  background-color: lightgray;
 }
