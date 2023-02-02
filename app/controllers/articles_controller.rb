@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def show
-
   end
 
   def index 
@@ -12,17 +11,19 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
-
+  
   def edit
     @article = Article.find(params[:id])
   end
-
+  
   def create
-    @article = Article.new(article_params)
+    @article = Article.new(params.require(:article).permit(:title, :description))
     if @article.save
       flash[:notice] = "Article was created successfully."
       redirect_to @article
     else
+      flash[:notice] = "Article could not be created."
+      # redirect_to 'new'
       render 'new'
     end
   end
@@ -52,7 +53,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title)
+    params.require(:article).permit(:title, :description)
   end
-
 end
